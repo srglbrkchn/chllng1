@@ -1,13 +1,12 @@
-html, body {
-  overflow: hidden;
-}
-
 body {
   width: 100%;
   height: 100%;
   background-color: hsl(185, 75%, 39%);
   font-family: 'Kumbh Sans', sans-serif;
-  position: absolute;
+  background-image: url(../images/bg-pattern-bottom.svg), url(../images/bg-pattern-top.svg);
+  background-position: right -40% bottom 195%, left -60% top 130%;
+  background-repeat: no-repeat;
+  min-width: 370px;
 }
 
 hr {
@@ -20,28 +19,10 @@ p {
   margin: 0;
 }
 
-.circle1 {
-  width: 50rem;
-}
-
-.circle-top {
-  position: absolute;
-  right: 53%;
-  bottom: 45%;
-  z-index: -1;
-}
-
-.circle-bottom {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  z-index: -1;
-}
-
 /* Profile Section */
 .container {
   margin: 12rem auto 3rem;
-  width: 310px;
+  width: 350px;
   background: white;
   border-radius: 6%;
   box-shadow: 1px 1px 10px 30px rgba(25, 162, 174, .2);
@@ -119,4 +100,15 @@ p {
   margin-top: 10px;
   color: hsl(0, 0%, 59%);
   font-size: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-image: url(../images/bg-pattern-bottom.svg),url(../images/bg-pattern-top.svg);
+    background-position: right 120% bottom 175%, left 122% top 150%;
+  }
+
+  .container {
+    width: 330px;
+  }
 }
